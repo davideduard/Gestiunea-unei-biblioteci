@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4099A34-3DB5-40D3-935C-2623E4854284}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Gestiune_Biblioteca</RootNamespace>
+    <AssemblyName>Gestiune_Biblioteca</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BibliotecaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotecaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotecaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotecaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\Admin\AdaugaCarteAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\Admin\AdaugaCarteAdmin.Designer.cs">
+      <DependentUpon>AdaugaCarteAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\Admin\AdaugareAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\Admin\AdaugareAutor.Designer.cs">
+      <DependentUpon>AdaugareAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\Admin\AdaugareFromAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\Admin\AdaugareFromAdmin.Designer.cs">
+      <DependentUpon>AdaugareFromAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotecaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotecaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbManagement.cs" />
+    <Compile Include="formulare\Admin\InterfataAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\Admin\InterfataAdmin.Designer.cs">
+      <DependentUpon>InterfataAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\User\InterfataUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\User\InterfataUser.Designer.cs">
+      <DependentUpon>InterfataUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\Main\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\Main\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\Main\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\Main\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\Admin\ModificareClientAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\Admin\ModificareClientAdmin.Designer.cs">
+      <DependentUpon>ModificareClientAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\Admin\StergAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\Admin\StergAdmin.Designer.cs">
+      <DependentUpon>StergAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\Admin\ModificareCarteAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\Admin\ModificareCarteAdmin.Designer.cs">
+      <DependentUpon>ModificareCarteAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\Admin\ImprumutNouAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\Admin\ImprumutNouAdmin.Designer.cs">
+      <DependentUpon>ImprumutNouAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\Admin\ListaImprumutAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\Admin\ListaImprumutAdmin.Designer.cs">
+      <DependentUpon>ListaImprumutAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\User\ImprumuturileMele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\User\ImprumuturileMele.Designer.cs">
+      <DependentUpon>ImprumuturileMele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\User\ImprumutNouUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\User\ImprumutNouUser.Designer.cs">
+      <DependentUpon>ImprumutNouUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="formulare\Main\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\Main\RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\Admin\StergereCarteAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\Admin\StergereCarteAdmin.Designer.cs">
+      <DependentUpon>StergereCarteAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\User\SetariProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\User\SetariProfil.Designer.cs">
+      <DependentUpon>SetariProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulare\Admin\Return.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulare\Admin\Return.Designer.cs">
+      <DependentUpon>Return.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="formulare\Admin\AdaugaCarteAdmin.resx">
+      <DependentUpon>AdaugaCarteAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\Admin\AdaugareAutor.resx">
+      <DependentUpon>AdaugareAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\Admin\AdaugareFromAdmin.resx">
+      <DependentUpon>AdaugareFromAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\Admin\InterfataAdmin.resx">
+      <DependentUpon>InterfataAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\Admin\StergAdmin.resx">
+      <DependentUpon>StergAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\Main\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\Main\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\Admin\ModificareClientAdmin.resx">
+      <DependentUpon>ModificareClientAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\Admin\ModificareCarteAdmin.resx">
+      <DependentUpon>ModificareCarteAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\Admin\ImprumutNouAdmin.resx">
+      <DependentUpon>ImprumutNouAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\Admin\ListaImprumutAdmin.resx">
+      <DependentUpon>ListaImprumutAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\User\InterfataUser.resx">
+      <DependentUpon>InterfataUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\User\ImprumuturileMele.resx">
+      <DependentUpon>ImprumuturileMele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\User\ImprumutNouUser.resx">
+      <DependentUpon>ImprumutNouUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="formulare\Main\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\Admin\StergereCarteAdmin.resx">
+      <DependentUpon>StergereCarteAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\User\SetariProfil.resx">
+      <DependentUpon>SetariProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulare\Admin\Return.resx">
+      <DependentUpon>Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BibliotecaDataSet.xsc">
+      <DependentUpon>BibliotecaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotecaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotecaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotecaDataSet.xss">
+      <DependentUpon>BibliotecaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotecaDataSet1.xsc">
+      <DependentUpon>BibliotecaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotecaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotecaDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BibliotecaDataSet1.xss">
+      <DependentUpon>BibliotecaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotecaDataSet2.xsc">
+      <DependentUpon>BibliotecaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotecaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotecaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotecaDataSet2.xss">
+      <DependentUpon>BibliotecaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Biblioteca.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Biblioteca_log.ldf">
+      <DependentUpon>Biblioteca.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
